@@ -1,27 +1,32 @@
-<!DOCTYPE html><html><head>
-<title>Ejemplo</title><meta charset="utf-8">
-<script type="text/javascript">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo calculadora (modificado)</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="calculadora.css" />
+	<script type="text/javascript">
 
-function vaciar () {
-  document.getElementById("n1").value = "";
-}
+	function vaciar () {
+  		document.getElementById("n1").value = "";
+	}
 
-function cuadrado() {
-  var num = document.getElementById("n1");
-  num.value = num.value * num.value;
-}
+	function cuadrado() {
+  		var num = document.getElementById("n1");
+  		num.value = num.value * num.value;
+	}
 
-function inverso() {
-  var num = document.getElementById("n1");
-  num.value = 1/num.value;
-}
-</script>
+	function inverso() {
+  		var num = document.getElementById("n1");
+  		num.value = 1/num.value;
+	}
+	</script>
 </head>
 <body>
-  Número:
-  <input type="text" id="n1" onclick="vaciar()"><p>
-
-  <button onclick="cuadrado()"> x<sup>2</sup> </button>
-  <button onclick="inverso()"> 1/x </button>
+	<h1>Calculadora HTML</h1>
+	<h2>Es capaz de calcular el cuadrado y el inverso de un número dado.</h2>
+  	<p>Número:
+  	<input type="text" id="n1" onclick="vaciar()"></p>
+  	<button title="Calcula el cuadrado" onclick="cuadrado()">x<sup>2</sup></button>
+  	<button title="Calcula el inverso" onclick="inverso()">1/x</button>
 </body>
 </html>
